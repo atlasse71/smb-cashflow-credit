@@ -1,0 +1,26 @@
+business_id,industry,pd_12m,default_12m,reason_1,reason_2,reason_3
+1730,trucking,0.9718,1,Existing debt payments relative to revenue,Number of active financing obligations,Recent new financing
+2187,prof_services,0.9639,1,Existing debt payments relative to revenue,Number of active financing obligations,Recent new financing
+3962,prof_services,0.9624,1,Existing debt payments relative to revenue,Number of active financing obligations,Recent new financing
+1483,restaurant,0.9578,0,Existing debt payments relative to revenue,Number of active financing obligations,Recent new financing
+524,healthcare,0.9351,1,Existing debt payments relative to revenue,Number of active financing obligations,Recent new financing
+99,retail,0.9235,1,Existing debt payments relative to revenue,Number of active financing obligations,Recent new financing
+1231,construction,0.8881,1,Number of active financing obligations,Existing debt payments relative to revenue,Recent new financing
+82,healthcare,0.8824,1,Number of active financing obligations,Existing debt payments relative to revenue,Recent new financing
+4913,prof_services,0.8824,1,Existing debt payments relative to revenue,Number of active financing obligations,Recent new financing
+3347,restaurant,0.8824,1,Existing debt payments relative to revenue,Number of active financing obligations,Recent new financing
+137,restaurant,0.8824,1,Number of active financing obligations,Existing debt payments relative to revenue,Recent new financing
+726,trucking,0.8824,1,Existing debt payments relative to revenue,Number of active financing obligations,Recent new financing
+1552,prof_services,0.8824,1,Existing debt payments relative to revenue,Number of active financing obligations,Recent new financing
+4171,restaurant,0.8824,1,Existing debt payments relative to revenue,Number of active financing obligations,Recent new financing
+2282,construction,0.8824,1,Existing debt payments relative to revenue,Number of active financing obligations,Recent new financing
+4536,trucking,0.8824,1,Existing debt payments relative to revenue,Number of active financing obligations,Recent new financing
+1543,trucking,0.8824,1,Number of active financing obligations,Existing debt payments relative to revenue,Recent new financing
+4538,restaurant,0.8824,1,Existing debt payments relative to revenue,Number of active financing obligations,Recent new financing
+595,retail,0.8824,1,Existing debt payments relative to revenue,Number of active financing obligations,Non-sufficient-funds events
+3458,restaurant,0.8824,1,Existing debt payments relative to revenue,Number of active financing obligations,Declining revenue trend
+2245,retail,0.7453,1,Existing debt payments relative to revenue,Number of active financing obligations,Recent new financing
+3559,trucking,0.7278,1,Number of active financing obligations,Existing debt payments relative to revenue,Recent new financing
+3070,construction,0.6837,1,Number of active financing obligations,Existing debt payments relative to revenue,Recent new financing
+2913,retail,0.6579,0,Number of active financing obligations,Existing debt payments relative to revenue,Non-sufficient-funds events
+4195,restaurant,0.5536,1,Existing debt payments relative to revenue,Number of active financing obligations,Recent new financing

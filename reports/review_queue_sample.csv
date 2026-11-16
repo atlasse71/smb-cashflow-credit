@@ -1,0 +1,201 @@
+business_id,date,amount,description,true_category,category,confidence,tier
+0,2025-05-29,-1252.4,ACH DEBIT 7624464062 CCD,operating_expense,lender_payment,0.6585268191876973,review_queue
+0,2025-06-17,-659.82,ACH DEBIT 2025934478 CCD,lender_payment,lender_payment,0.792490986605258,review_queue
+0,2025-06-24,-659.82,ACH DEBIT 8940852860 CCD,lender_payment,lender_payment,0.792490986605258,review_queue
+0,2025-06-26,-626.93,ACH DEBIT 3723120293 CCD,operating_expense,lender_payment,0.8013095800597498,review_queue
+0,2025-07-01,-659.82,ACH DEBIT 4370841937 CCD,lender_payment,lender_payment,0.792490986605258,review_queue
+0,2025-07-01,-516.18,ACH DEBIT 8877495664 CCD,lender_payment,lender_payment,0.832243663142713,review_queue
+0,2025-07-08,-516.18,ACH DEBIT 5748459321 CCD,lender_payment,lender_payment,0.832243663142713,review_queue
+0,2025-08-05,-516.18,ACH DEBIT 8582250359 CCD,lender_payment,lender_payment,0.832243663142713,review_queue
+0,2025-09-09,-516.18,ACH DEBIT 9964715598 CCD,lender_payment,lender_payment,0.832243663142713,review_queue
+0,2025-09-11,-722.7,ACH DEBIT 4526758830 CCD,operating_expense,lender_payment,0.7760832998922316,review_queue
+0,2025-09-16,-516.18,ACH DEBIT 5744637803 CCD,lender_payment,lender_payment,0.832243663142713,review_queue
+0,2025-09-22,-679.07,ACH DEBIT 8814629606 CCD,operating_expense,lender_payment,0.7874055638965963,review_queue
+0,2025-09-23,-516.18,ACH DEBIT 9224449641 CCD,lender_payment,lender_payment,0.832243663142713,review_queue
+0,2025-09-25,-427.23,ACH DEBIT 7656477544 CCD,operating_expense,lender_payment,0.8585211615116309,review_queue
+0,2025-09-30,-659.82,ACH DEBIT 4879162136 CCD,lender_payment,lender_payment,0.792490986605258,review_queue
+0,2025-10-07,-516.18,ACH DEBIT 9252766280 CCD,lender_payment,lender_payment,0.832243663142713,review_queue
+0,2025-10-21,-516.18,ACH DEBIT 1572623716 CCD,lender_payment,lender_payment,0.832243663142713,review_queue
+0,2025-11-04,-659.82,ACH DEBIT 2220684706 CCD,lender_payment,lender_payment,0.792490986605258,review_queue
+0,2025-11-11,-516.18,ACH DEBIT 9823453398 CCD,lender_payment,lender_payment,0.832243663142713,review_queue
+1,2024-10-11,-15030.13,CHECK 1208,operating_expense,rent,0.5139198492986354,review_queue
+1,2024-11-02,-30594.16,CHECK 6899,rent,rent,0.6895904081092553,review_queue
+1,2024-11-03,19635.54,WIRE IN 9882186687,revenue,revenue,0.8525962468696278,review_queue
+1,2024-11-16,319960.15,WIRE IN 7075296557,loan_proceeds,loan_proceeds,0.7302513166464281,review_queue
+1,2024-11-19,-2491.48,ACH DEBIT 9652884199 CCD,lender_payment,lender_payment,0.5121580467119385,review_queue
+1,2024-11-21,-2491.48,ACH DEBIT 1481871469 CCD,lender_payment,lender_payment,0.5121580467119385,review_queue
+1,2024-11-25,-2491.48,ACH DEBIT 8912080459 CCD,lender_payment,lender_payment,0.5121580467119385,review_queue
+1,2024-11-27,-2491.48,ACH DEBIT 6688958078 CCD,lender_payment,lender_payment,0.5121580467119385,review_queue
+1,2024-11-28,-9128.84,CHECK 7436,operating_expense,operating_expense,0.6140398673315768,review_queue
+1,2024-12-03,-20718.85,CHECK 8226,operating_expense,rent,0.5965292017214576,review_queue
+1,2024-12-03,-2491.48,ACH DEBIT 7711940386 CCD,lender_payment,lender_payment,0.5121580467119385,review_queue
+1,2024-12-04,-2491.48,ACH DEBIT 6502183099 CCD,lender_payment,lender_payment,0.5121580467119385,review_queue
+1,2024-12-05,-15431.69,CHECK 9609,operating_expense,rent,0.520797561812362,review_queue
+1,2024-12-12,-8108.78,ACH DEBIT 8720293761 CCD,operating_expense,operating_expense,0.7704116143665997,review_queue
+1,2024-12-12,-2491.48,ACH DEBIT 9664116249 CCD,lender_payment,lender_payment,0.5121580467119385,review_queue
+1,2024-12-19,-2491.48,ACH DEBIT 5239586825 CCD,lender_payment,lender_payment,0.5121580467119385,review_queue
+1,2024-12-20,-2491.48,ACH DEBIT 7447823346 CCD,lender_payment,lender_payment,0.5121580467119385,review_queue
+1,2024-12-23,-2491.48,ACH DEBIT 7180049024 CCD,lender_payment,lender_payment,0.5121580467119385,review_queue
+1,2024-12-26,-11401.04,CHECK 6154,operating_expense,operating_expense,0.5577965093291675,review_queue
+1,2024-12-26,-2491.48,ACH DEBIT 8522095411 CCD,lender_payment,lender_payment,0.5121580467119385,review_queue
+1,2024-12-27,-16313.54,CHECK 2090,operating_expense,rent,0.535264784499762,review_queue
+1,2025-01-01,-30594.16,CHECK 6625,rent,rent,0.6895904081092553,review_queue
+1,2025-01-01,-2491.48,ACH DEBIT 8719139259 CCD,lender_payment,lender_payment,0.5121580467119385,review_queue
+1,2025-01-02,27996.02,WIRE IN 7969841428,revenue,revenue,0.8018030769606974,review_queue
+1,2025-01-08,-2491.48,ACH DEBIT 3027210687 CCD,lender_payment,lender_payment,0.5121580467119385,review_queue
+1,2025-01-13,-2491.48,ACH DEBIT 9073379952 CCD,lender_payment,lender_payment,0.5121580467119385,review_queue
+1,2025-01-14,-2491.48,ACH DEBIT 2866147854 CCD,lender_payment,lender_payment,0.5121580467119385,review_queue
+1,2025-01-17,-2491.48,ACH DEBIT 9569995115 CCD,lender_payment,lender_payment,0.5121580467119385,review_queue
+1,2025-01-20,-2491.48,ACH DEBIT 7250187254 CCD,lender_payment,lender_payment,0.5121580467119385,review_queue
+1,2025-01-23,-2491.48,ACH DEBIT 3587914454 CCD,lender_payment,lender_payment,0.5121580467119385,review_queue
+1,2025-01-24,-2491.48,ACH DEBIT 6848249319 CCD,lender_payment,lender_payment,0.5121580467119385,review_queue
+1,2025-01-31,-2491.48,ACH DEBIT 3788220981 CCD,lender_payment,lender_payment,0.5121580467119385,review_queue
+1,2025-02-05,-2491.48,ACH DEBIT 4944071992 CCD,lender_payment,lender_payment,0.5121580467119385,review_queue
+1,2025-02-12,61701.01,WIRE IN 4666983177,revenue,revenue,0.6456788696677062,review_queue
+1,2025-02-20,-2491.48,ACH DEBIT 7014166648 CCD,lender_payment,lender_payment,0.5121580467119385,review_queue
+1,2025-02-28,-2491.48,ACH DEBIT 7139224321 CCD,lender_payment,lender_payment,0.5121580467119385,review_queue
+1,2025-03-02,-30594.16,CHECK 8221,rent,rent,0.6895904081092553,review_queue
+1,2025-03-04,-2491.48,ACH DEBIT 4487361385 CCD,lender_payment,lender_payment,0.5121580467119385,review_queue
+1,2025-03-07,-2491.48,ACH DEBIT 6067881002 CCD,lender_payment,lender_payment,0.5121580467119385,review_queue
+1,2025-03-12,-46261.49,CHECK 8496,operating_expense,rent,0.7738498413372076,review_queue
+1,2025-03-13,-3234.87,ACH DEBIT 4286527525 CCD,operating_expense,operating_expense,0.5572386538369655,review_queue
+1,2025-03-13,-2491.48,ACH DEBIT 7028947635 CCD,lender_payment,lender_payment,0.5121580467119385,review_queue
+1,2025-03-14,-2491.48,ACH DEBIT 9053599810 CCD,lender_payment,lender_payment,0.5121580467119385,review_queue
+1,2025-03-19,-24018.52,CHECK 2351,operating_expense,rent,0.6330697611519986,review_queue
+1,2025-03-20,-2491.48,ACH DEBIT 6887348872 CCD,lender_payment,lender_payment,0.5121580467119385,review_queue
+2,2024-11-19,-2849.14,ACH DEBIT 8136503593 CCD,operating_expense,lender_payment,0.6857609553936195,review_queue
+2,2024-11-22,-6084.83,ACH DEBIT 8328716332 CCD,operating_expense,operating_expense,0.5073330620331534,review_queue
+2,2024-11-26,55970.9,WIRE IN 3035091843,loan_proceeds,revenue,0.6678646498513492,review_queue
+2,2024-12-03,-2592.88,ACH DEBIT 8017528724 CCD,operating_expense,lender_payment,0.7070163964742822,review_queue
+2,2024-12-09,-3146.14,ACH DEBIT 2138972985 CCD,operating_expense,lender_payment,0.6625255388143807,review_queue
+2,2025-01-06,-10768.32,CHECK 8986,operating_expense,operating_expense,0.5460541471394453,review_queue
+2,2025-01-07,-3924.57,CHECK 5304,operating_expense,operating_expense,0.7752751618600561,review_queue
+2,2025-02-03,-5868.63,CHECK 7286,operating_expense,operating_expense,0.6939095009052512,review_queue
+2,2025-02-11,-4057.46,ACH DEBIT 9377170894 CCD,lender_payment,lender_payment,0.5994376221722987,review_queue
+2,2025-02-13,-11279.34,CHECK 3598,rent,operating_expense,0.5340282863041488,review_queue
+2,2025-02-14,-3568.13,CHECK 4302,operating_expense,operating_expense,0.792105680368361,review_queue
+2,2025-02-18,-3080.34,ACH DEBIT 6454566598 CCD,operating_expense,lender_payment,0.667549523945494,review_queue
+2,2025-03-24,-10282.3,CHECK 3106,operating_expense,operating_expense,0.5579799367223425,review_queue
+2,2025-03-25,-4057.46,ACH DEBIT 4553695965 CCD,lender_payment,lender_payment,0.5994376221722987,review_queue
+2,2025-04-07,19874.39,WIRE IN 4233718263,revenue,revenue,0.8510588119250287,review_queue
+2,2025-05-01,-2452.77,ACH DEBIT 7993434288 CCD,operating_expense,lender_payment,0.719141748785341,review_queue
+2,2025-05-02,-7522.7,ACH DEBIT 8719487595 CCD,operating_expense,operating_expense,0.5635839075228822,review_queue
+2,2025-05-13,-4057.46,ACH DEBIT 1017476076 CCD,lender_payment,lender_payment,0.5994376221722987,review_queue
+3,2025-04-29,-641.17,ACH DEBIT 6966014588 CCD,operating_expense,lender_payment,0.7344027056683696,review_queue
+3,2025-05-07,-580.75,ACH DEBIT 1238129925 CCD,operating_expense,lender_payment,0.7544608890376165,review_queue
+3,2025-06-20,-797.07,ACH DEBIT 8179258562 CCD,operating_expense,lender_payment,0.6867754378624402,review_queue
+3,2025-07-22,-348.08,ACH DEBIT 1348268106 CCD,operating_expense,lender_payment,0.8412694541349804,review_queue
+3,2025-08-05,-333.74,ACH DEBIT 3861398329 CCD,lender_payment,lender_payment,0.8471573642364236,review_queue
+3,2025-08-19,-358.9,ACH DEBIT 8096852945 CCD,operating_expense,lender_payment,0.8368700727409258,review_queue
+3,2025-08-26,-333.74,ACH DEBIT 8867124493 CCD,lender_payment,lender_payment,0.8471573642364236,review_queue
+3,2025-09-16,-1079.28,ACH DEBIT 6912656754 CCD,operating_expense,lender_payment,0.6134658542842568,review_queue
+3,2025-10-15,-834.56,ACH DEBIT 2564796512 CCD,operating_expense,lender_payment,0.6761397489657162,review_queue
+4,2024-09-05,-4122.47,CHECK 6822,operating_expense,operating_expense,0.7797356366360094,review_queue
+4,2024-10-10,-6962.93,CHECK 5632,operating_expense,operating_expense,0.6719691231287752,review_queue
+4,2024-11-20,-7334.98,CHECK 9136,operating_expense,operating_expense,0.6598802050728263,review_queue
+4,2024-12-24,-5466.01,CHECK 3524,operating_expense,operating_expense,0.7250729980200671,review_queue
+4,2024-12-27,-4520.55,CHECK 8445,operating_expense,operating_expense,0.7627747848060077,review_queue
+4,2025-01-27,-7675.63,CHECK 4004,rent,operating_expense,0.6491638281586782,review_queue
+5,2025-02-26,-1263.18,ACH DEBIT 1216233963 CCD,operating_expense,lender_payment,0.8386343102573727,review_queue
+5,2025-03-03,-1487.66,ACH DEBIT 9615634676 CCD,operating_expense,lender_payment,0.813609155650063,review_queue
+5,2025-03-27,29684.1,WIRE IN 7662391438,loan_proceeds,revenue,0.546663574457761,review_queue
+5,2025-04-10,29565.97,WIRE IN 3697441560,loan_proceeds,revenue,0.5476591696955558,review_queue
+5,2025-04-17,-3108.65,ACH DEBIT 3664047451 CCD,operating_expense,lender_payment,0.6653795582281972,review_queue
+5,2025-05-07,-3451.28,ACH DEBIT 5506823504 CCD,operating_expense,lender_payment,0.6400986590528339,review_queue
+5,2025-05-20,-1234.11,ACH DEBIT 8674163272 CCD,operating_expense,lender_payment,0.841966463277646,review_queue
+5,2025-05-21,-4051.3,CHECK 5968,rent,operating_expense,0.7799752710580178,review_queue
+5,2025-05-26,-1276.06,ACH DEBIT 6381256193 CCD,operating_expense,lender_payment,0.837164708944513,review_queue
+5,2025-06-13,-4874.48,ACH DEBIT 5439950283 CCD,operating_expense,lender_payment,0.5516519375066854,review_queue
+5,2025-06-20,-4051.3,CHECK 2349,rent,operating_expense,0.7799752710580178,review_queue
+5,2025-07-16,-4653.33,ACH DEBIT 6492743243 CCD,operating_expense,lender_payment,0.5638731665053354,review_queue
+6,2025-07-11,-385.5,ACH DEBIT 3772306474 CCD,operating_expense,operating_expense,0.6394597093616128,review_queue
+6,2025-07-23,-603.82,ACH DEBIT 5351640744 CCD,operating_expense,operating_expense,0.7409653599723874,review_queue
+6,2025-08-07,-621.31,ACH DEBIT 3177166295 CCD,operating_expense,operating_expense,0.7467626772675674,review_queue
+7,2023-12-28,-7168.83,CHECK 8041,operating_expense,operating_expense,0.635716636617271,review_queue
+7,2024-02-14,-10912.53,CHECK 8677,rent,operating_expense,0.5294989351598052,review_queue
+7,2024-03-11,-9844.36,CHECK 7898,operating_expense,operating_expense,0.5561859451856803,review_queue
+7,2024-03-28,27185.95,WIRE IN 4382783162,revenue,revenue,0.8627098650916527,review_queue
+7,2024-04-18,31092.28,WIRE IN 3638117381,revenue,revenue,0.845868096803265,review_queue
+7,2024-05-15,-4038.92,CHECK 8490,operating_expense,operating_expense,0.760534297974332,review_queue
+9,2024-02-09,-4562.24,CHECK 5306,rent,operating_expense,0.7579730074953891,review_queue
+9,2024-05-09,-4562.24,CHECK 5280,rent,operating_expense,0.7579730074953891,review_queue
+9,2024-05-22,-406.68,ACH DEBIT 9371890242 CCD,operating_expense,lender_payment,0.7051008459965802,review_queue
+9,2024-06-08,-4562.24,CHECK 4378,rent,operating_expense,0.7579730074953891,review_queue
+9,2024-06-10,-379.41,ACH DEBIT 5358407490 CCD,lender_payment,lender_payment,0.7202305909814929,review_queue
+9,2024-06-12,-379.41,ACH DEBIT 1441777862 CCD,lender_payment,lender_payment,0.7202305909814929,review_queue
+9,2024-06-13,-379.41,ACH DEBIT 1299948717 CCD,lender_payment,lender_payment,0.7202305909814929,review_queue
+9,2024-06-15,10530.65,WIRE IN 4929829686,revenue,revenue,0.5782968097520755,review_queue
+9,2024-06-21,-379.41,ACH DEBIT 5781550790 CCD,lender_payment,lender_payment,0.7202305909814929,review_queue
+9,2024-06-24,-379.41,ACH DEBIT 5253357079 CCD,lender_payment,lender_payment,0.7202305909814929,review_queue
+9,2024-06-26,-379.41,ACH DEBIT 2072128328 CCD,lender_payment,lender_payment,0.7202305909814929,review_queue
+9,2024-07-02,-379.41,ACH DEBIT 7853844922 CCD,lender_payment,lender_payment,0.7202305909814929,review_queue
+9,2024-07-04,-379.41,ACH DEBIT 1349340153 CCD,lender_payment,lender_payment,0.7202305909814929,review_queue
+9,2024-07-05,-379.41,ACH DEBIT 4552285821 CCD,lender_payment,lender_payment,0.7202305909814929,review_queue
+9,2024-07-08,-379.41,ACH DEBIT 7346141764 CCD,lender_payment,lender_payment,0.7202305909814929,review_queue
+9,2024-07-10,-379.41,ACH DEBIT 8828040001 CCD,lender_payment,lender_payment,0.7202305909814929,review_queue
+9,2024-07-16,-379.41,ACH DEBIT 2786177402 CCD,lender_payment,lender_payment,0.7202305909814929,review_queue
+9,2024-07-17,-379.41,ACH DEBIT 1966713180 CCD,lender_payment,lender_payment,0.7202305909814929,review_queue
+9,2024-07-19,-379.41,ACH DEBIT 2696008446 CCD,lender_payment,lender_payment,0.7202305909814929,review_queue
+9,2024-07-30,-379.41,ACH DEBIT 9782266471 CCD,lender_payment,lender_payment,0.7202305909814929,review_queue
+10,2024-02-28,17035.92,WIRE IN 1758994719,revenue,revenue,0.869683236034414,review_queue
+10,2024-03-29,-5010.72,CHECK 6296,rent,operating_expense,0.7360438810915997,review_queue
+10,2024-04-28,-5010.72,CHECK 2498,rent,operating_expense,0.7360438810915997,review_queue
+10,2024-04-30,-1477.32,ACH DEBIT 2033141433 CCD,operating_expense,operating_expense,0.7267790877143221,review_queue
+10,2024-05-01,-3571.58,CHECK 4241,operating_expense,operating_expense,0.7987899732480483,review_queue
+10,2024-05-03,-1598.58,ACH DEBIT 7312397280 CCD,operating_expense,operating_expense,0.7431657975133553,review_queue
+10,2024-05-28,-5010.72,CHECK 1071,rent,operating_expense,0.7360438810915997,review_queue
+10,2024-06-07,-1860.31,ACH DEBIT 7500168570 CCD,operating_expense,operating_expense,0.7728085032316271,review_queue
+10,2024-06-19,-1275.27,ACH DEBIT 6748341416 CCD,operating_expense,operating_expense,0.6945493415474965,review_queue
+11,2025-06-23,-249.78,ACH DEBIT 2912482199 CCD,operating_expense,operating_expense,0.7845844609345664,review_queue
+12,2025-05-31,-7340.07,CHECK 5780,rent,operating_expense,0.6518104178163628,review_queue
+12,2025-08-01,-3819.26,CHECK 9973,operating_expense,operating_expense,0.7873142195150988,review_queue
+12,2025-08-18,-6096.21,CHECK 6433,operating_expense,operating_expense,0.6944156715426544,review_queue
+12,2025-10-27,-5439.41,CHECK 7747,operating_expense,operating_expense,0.7190657217783818,review_queue
+13,2023-07-24,-3884.26,CHECK 4957,operating_expense,operating_expense,0.7951364838009056,review_queue
+13,2023-07-28,-235.96,ACH DEBIT 5863036060 CCD,operating_expense,operating_expense,0.5127004209376389,review_queue
+13,2023-09-15,-802.9,ACH DEBIT 3781552960 CCD,operating_expense,operating_expense,0.7948982458532228,review_queue
+13,2023-10-23,-443.23,ACH DEBIT 1312042146 CCD,operating_expense,operating_expense,0.6729616242185752,review_queue
+13,2023-11-03,-602.56,ACH DEBIT 2856160753 CCD,operating_expense,operating_expense,0.7405378911394792,review_queue
+13,2023-12-28,-323.66,ACH DEBIT 9494242331 CCD,operating_expense,operating_expense,0.5955405675560336,review_queue
+15,2025-03-20,-4363.26,CHECK 3137,operating_expense,operating_expense,0.7554304317649245,review_queue
+15,2025-03-25,-2449.93,ACH DEBIT 3037763683 CCD,operating_expense,operating_expense,0.7394090356586434,review_queue
+15,2025-04-07,-4839.65,CHECK 6178,operating_expense,operating_expense,0.734906191279402,review_queue
+15,2025-04-21,-6223.74,CHECK 1973,operating_expense,operating_expense,0.6807317820147069,review_queue
+15,2025-06-05,-3864.09,CHECK 8041,operating_expense,operating_expense,0.7780853116917302,review_queue
+15,2025-06-19,-700.84,ACH DEBIT 6687367232 CCD,lender_payment,lender_payment,0.5724559478420876,review_queue
+15,2025-06-23,-10397.31,CHECK 7878,rent,operating_expense,0.5551133148196705,review_queue
+15,2025-06-23,-700.84,ACH DEBIT 6015048487 CCD,lender_payment,lender_payment,0.5724559478420876,review_queue
+15,2025-07-03,-700.84,ACH DEBIT 3112325305 CCD,lender_payment,lender_payment,0.5724559478420876,review_queue
+15,2025-07-07,-700.84,ACH DEBIT 8157578656 CCD,lender_payment,lender_payment,0.5724559478420876,review_queue
+15,2025-07-09,-700.84,ACH DEBIT 1616161557 CCD,lender_payment,lender_payment,0.5724559478420876,review_queue
+15,2025-07-16,-700.84,ACH DEBIT 9096701398 CCD,lender_payment,lender_payment,0.5724559478420876,review_queue
+15,2025-07-17,-700.84,ACH DEBIT 5110044658 CCD,lender_payment,lender_payment,0.5724559478420876,review_queue
+15,2025-07-21,-5265.09,CHECK 3966,operating_expense,operating_expense,0.7174259062178289,review_queue
+15,2025-08-06,-700.84,ACH DEBIT 4154953883 CCD,lender_payment,lender_payment,0.5724559478420876,review_queue
+15,2025-08-08,-700.84,ACH DEBIT 9118072343 CCD,lender_payment,lender_payment,0.5724559478420876,review_queue
+15,2025-08-11,-700.84,ACH DEBIT 4146934431 CCD,lender_payment,lender_payment,0.5724559478420876,review_queue
+15,2025-08-14,-700.84,ACH DEBIT 6777021400 CCD,lender_payment,lender_payment,0.5724559478420876,review_queue
+15,2025-08-19,-700.84,ACH DEBIT 7572456816 CCD,lender_payment,lender_payment,0.5724559478420876,review_queue
+15,2025-08-20,-700.84,ACH DEBIT 9571768966 CCD,lender_payment,lender_payment,0.5724559478420876,review_queue
+17,2025-02-11,-7641.59,CHECK 6091,operating_expense,operating_expense,0.6570111348257397,review_queue
+17,2025-02-24,99347.11,WIRE IN 2383329507,loan_proceeds,loan_proceeds,0.867265758411828,review_queue
+17,2025-02-26,-4985.65,ACH DEBIT 6245001327 CCD,operating_expense,operating_expense,0.5756547521297676,review_queue
+17,2025-02-26,-796.34,ACH DEBIT 7232434561 CCD,lender_payment,lender_payment,0.8391353453012405,review_queue
+17,2025-02-27,-796.34,ACH DEBIT 4580064332 CCD,lender_payment,lender_payment,0.8391353453012405,review_queue
+17,2025-02-28,-796.34,ACH DEBIT 2650551812 CCD,lender_payment,lender_payment,0.8391353453012405,review_queue
+17,2025-03-06,-796.34,ACH DEBIT 5617107834 CCD,lender_payment,lender_payment,0.8391353453012405,review_queue
+17,2025-03-10,-796.34,ACH DEBIT 4615462348 CCD,lender_payment,lender_payment,0.8391353453012405,review_queue
+17,2025-03-11,-796.34,ACH DEBIT 6314915180 CCD,lender_payment,lender_payment,0.8391353453012405,review_queue
+17,2025-03-14,-796.34,ACH DEBIT 9461766358 CCD,lender_payment,lender_payment,0.8391353453012405,review_queue
+17,2025-03-18,-6253.76,ACH DEBIT 4481760407 CCD,operating_expense,operating_expense,0.6333941341162036,review_queue
+17,2025-03-26,-7691.73,CHECK 4944,operating_expense,operating_expense,0.6554708081147542,review_queue
+17,2025-03-31,-796.34,ACH DEBIT 6242679034 CCD,lender_payment,lender_payment,0.8391353453012405,review_queue
+17,2025-04-01,-796.34,ACH DEBIT 4651050416 CCD,lender_payment,lender_payment,0.8391353453012405,review_queue
+17,2025-04-02,-796.34,ACH DEBIT 3522778104 CCD,lender_payment,lender_payment,0.8391353453012405,review_queue
+17,2025-04-04,-796.34,ACH DEBIT 5491679842 CCD,lender_payment,lender_payment,0.8391353453012405,review_queue
+17,2025-04-08,-796.34,ACH DEBIT 1667146512 CCD,lender_payment,lender_payment,0.8391353453012405,review_queue
+17,2025-04-10,-6526.27,ACH DEBIT 3619150995 CCD,operating_expense,operating_expense,0.6438983954050791,review_queue
+17,2025-04-11,-796.34,ACH DEBIT 6513070681 CCD,lender_payment,lender_payment,0.8391353453012405,review_queue
+17,2025-04-14,-796.34,ACH DEBIT 8337178778 CCD,lender_payment,lender_payment,0.8391353453012405,review_queue
+17,2025-04-17,-6321.82,CHECK 3043,operating_expense,operating_expense,0.7001332209214055,review_queue
+17,2025-04-18,-2811.33,ACH DEBIT 3174585198 CCD,operating_expense,lender_payment,0.5760015713989227,review_queue

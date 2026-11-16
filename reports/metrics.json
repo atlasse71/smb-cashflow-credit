@@ -1,0 +1,134 @@
+{
+  "data": {
+    "businesses": 5000,
+    "transactions": 1289386,
+    "default_rate": 0.1678
+  },
+  "classification": {
+    "labeled_businesses": 750,
+    "eval_transactions": 1095992,
+    "overall_accuracy": 0.981,
+    "accuracy_excluding_review_queue": 0.9946,
+    "by_tier": {
+      "ml": {
+        "share": 0.7213,
+        "accuracy": 0.9929
+      },
+      "review_queue": {
+        "share": 0.0461,
+        "accuracy": 0.6994
+      },
+      "rules": {
+        "share": 0.2326,
+        "accuracy": 1.0
+      }
+    },
+    "credit_critical": {
+      "lender_payment": {
+        "precision": 0.9599,
+        "recall": 0.9742
+      },
+      "loan_proceeds": {
+        "precision": 0.9727,
+        "recall": 0.7828
+      },
+      "revenue": {
+        "precision": 0.9981,
+        "recall": 0.9998
+      },
+      "transfer_in": {
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "transfer_out": {
+        "precision": 1.0,
+        "recall": 1.0
+      }
+    },
+    "llm_enabled": false,
+    "llm_calls": 0
+  },
+  "feature_fidelity_corr": {
+    "avg_monthly_revenue_log": 0.998,
+    "revenue_cv": 0.9398,
+    "revenue_trend": 0.9751,
+    "min_month_rev_to_avg": 0.9722,
+    "expense_to_revenue": 0.9545,
+    "avg_daily_balance_to_rev": 0.9872,
+    "days_negative": 1.0,
+    "nsf_count": 1.0,
+    "nsf_last_30d": 1.0,
+    "active_funders": 0.9155,
+    "lender_pmt_to_revenue": 0.9685,
+    "new_funding_90d": 0.873,
+    "owner_draw_to_revenue": 0.9913,
+    "deposit_days_share": 0.9999,
+    "top_channel_share": 0.9757
+  },
+  "pd_model": {
+    "split": {
+      "train": 2109,
+      "calibration": 1026,
+      "oot_test": 1115
+    },
+    "lightgbm_oot": {
+      "auc": 0.7824,
+      "gini": 0.5649,
+      "ks": 0.4526,
+      "brier": 0.1222,
+      "mean_pd": 0.1367,
+      "bad_rate": 0.1892
+    },
+    "logistic_oot": {
+      "auc": 0.7867,
+      "gini": 0.5735,
+      "ks": 0.4377,
+      "brier": 0.1207,
+      "mean_pd": 0.1598,
+      "bad_rate": 0.1892
+    },
+    "lightgbm_queue_resolved_oot": {
+      "auc": 0.7926,
+      "gini": 0.5853,
+      "ks": 0.4823,
+      "brier": 0.1195,
+      "mean_pd": 0.1355,
+      "bad_rate": 0.1892
+    },
+    "lightgbm_true_labels_oot": {
+      "auc": 0.8081,
+      "gini": 0.6163,
+      "ks": 0.5085,
+      "brier": 0.1201,
+      "mean_pd": 0.1396,
+      "bad_rate": 0.1892
+    },
+    "boosting_rounds": 81,
+    "target_bad_rate": 0.1,
+    "approval_rate_at_target": {
+      "lightgbm": 0.7803,
+      "logistic": 0.7381,
+      "lightgbm_queue_resolved": 0.8099,
+      "lightgbm_true_labels": 0.8197
+    },
+    "score_psi_train_vs_oot": 0.0144,
+    "calibration_gap_oot": 0.0526
+  },
+  "shap_mean_abs": {
+    "active_funders": 0.4353,
+    "lender_pmt_to_revenue": 0.304,
+    "nsf_count": 0.2306,
+    "revenue_trend": 0.1204,
+    "new_funding_90d": 0.104,
+    "days_negative": 0.0973,
+    "owner_draw_to_revenue": 0.0589,
+    "expense_to_revenue": 0.0497,
+    "top_channel_share": 0.048,
+    "min_month_rev_to_avg": 0.0468,
+    "revenue_cv": 0.0302,
+    "avg_monthly_revenue_log": 0.0248,
+    "avg_daily_balance_to_rev": 0.0086,
+    "deposit_days_share": 0.0045,
+    "nsf_last_30d": 0.0
+  }
+}
