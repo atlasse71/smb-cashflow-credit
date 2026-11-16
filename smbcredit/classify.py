@@ -92,22 +92,77 @@ class MLClassifier:
         return self.clf.classes_[p.argmax(1)], p.max(1)
 
 
-LLM_PROMPT = """You classify small-business bank transactions for credit underwriting.
-Categories: {cats}.
-Rules: lender_payment = recurring debits to MCA/loan funders (often daily or weekly,
-identical amounts); loan_proceeds = a large one-off credit from a funder; revenue =
-customer/processor deposits; transfers are between the owner's own accounts.
+LLM_PROMPT = """You classify one small-business bank transaction for credit underwriting.
 
-Transaction: "{desc}"  amount: {amount:+.2f}
-Same descriptor pattern seen {n_seen} times in this statement; amounts identical: {same_amt}.
+Categories: {cats}
 
-Reply with JSON only: {{"category": "<one category>", "confidence": <0-1>}}"""
+Definitions:
+- lender_payment: recurring debits to an MCA or loan funder, usually the SAME amount every
+  business day or every week.
+- loan_proceeds: a large one-off credit from a funder; identical recurring debits typically
+  start within a few days after it.
+- revenue: customer, card-processor or insurance deposits.
+- transfer_in / transfer_out: money moved between the owner's own accounts.
+- operating_expense: suppliers, utilities and other business costs (amounts vary).
+
+Transaction descriptor: "{desc}"
+Direction: {direction}
+Size relative to this business's typical deposit: {size}
+Times this exact amount recurs in the statement with this descriptor pattern: {recur}
+Typical spacing between those recurrences: {cadence}
+Identical recurring debits starting within 3 days after this credit: {debits_after}
+
+Reply with JSON only, no other text: {{"category": "<one category>", "confidence": <number 0-1>}}"""
+
+
+def _bucket(x, edges, labels):
+    for e, l in zip(edges, labels):
+        if x < e:
+            return l
+    return labels[-1]
+
+
+def llm_context(df: pd.DataFrame, rows: pd.Index) -> pd.DataFrame:
+    """Behavioral context for the low-confidence rows, bucketed so answers can be cached.
+
+    Buckets keep the number of distinct LLM calls small (each combination is asked once)
+    while carrying the signals that separate, e.g., an unnamed MCA debit from a supplier
+    autopay, or loan proceeds from a large customer wire.
+    """
+    sub = df.loc[rows]
+    out = {}
+    for b, g in sub.groupby("business_id"):
+        biz = df[df.business_id == b]
+        credits = biz[biz.amount > 0]
+        typical = max(credits.amount.median(), 1.0) if len(credits) else 1.0
+        debits = biz[biz.amount < 0].assign(a=lambda x: x.amount.round(0))
+        streams = debits.groupby("a").date.agg(["size", "min"])
+        streams = streams[streams["size"] >= 4]
+        for i, r in g.iterrows():
+            same = biz[(biz.norm == r.norm) & (biz.amount.round(0) == round(r.amount))]
+            gaps = same.date.sort_values().diff().dt.days.dropna()
+            gap = gaps.median() if len(gaps) else np.nan
+            if r.amount > 0:
+                after = streams[(streams["min"] > r.date) & (streams["min"] <= r.date + pd.Timedelta(days=3))]
+                debits_after = "yes" if len(after) else "no"
+            else:
+                debits_after = "not applicable (debit)"
+            out[i] = {
+                "direction": "credit (money in)" if r.amount > 0 else "debit (money out)",
+                "size": _bucket(abs(r.amount) / typical, [0.5, 2, 10, np.inf],
+                                ["small (<0.5x)", "typical (0.5-2x)", "large (2-10x)", "very large (>10x)"]),
+                "recur": _bucket(len(same), [2, 5, 21, np.inf], ["once", "2-4 times", "5-20 times", "over 20 times"]),
+                "cadence": "n/a" if np.isnan(gap) else _bucket(gap, [1.6, 4, 9, np.inf],
+                                                               ["daily (business days)", "every few days", "weekly", "irregular / monthly"]),
+                "debits_after": debits_after,
+            }
+    return pd.DataFrame.from_dict(out, orient="index")
 
 
 class LLMClassifier:
     """Anthropic-backed tier. Active only when ANTHROPIC_API_KEY is set."""
 
-    def __init__(self, model: str = "claude-haiku-4-5"):
+    def __init__(self, model: str = "claude-haiku-5-5"):
         self.model = model
         self.cache: dict[str, tuple[str, float]] = {}
         self.calls = 0
@@ -116,23 +171,25 @@ class LLMClassifier:
             import anthropic
             self.client = anthropic.Anthropic()
 
-    def classify(self, desc: str, norm: str, amount: float, n_seen: int, same_amt: bool):
-        key = f"{norm}|{np.sign(amount)}|{same_amt}"
+    def classify(self, norm: str, ctx: dict) -> tuple[str, float]:
+        key = norm + "|" + "|".join(str(ctx[k]) for k in sorted(ctx))
         if key in self.cache:
             return self.cache[key]
         msg = self.client.messages.create(
-            model=self.model, max_tokens=60,
-            messages=[{"role": "user", "content": LLM_PROMPT.format(
-                cats=", ".join(CATEGORIES), desc=desc, amount=amount, n_seen=n_seen, same_amt=same_amt)}],
+            model=self.model, max_tokens=1024,
+            messages=[{"role": "user", "content": LLM_PROMPT.format(cats=", ".join(CATEGORIES), desc=norm, **ctx)}],
         )
         self.calls += 1
+        text = "".join(b.text for b in msg.content if getattr(b, "type", "") == "text")
         try:
-            out = json.loads(msg.content[0].text)
+            out = json.loads(re.sub(r"^```(json)?|```$", "", text.strip()).strip())
             res = (out["category"] if out["category"] in CATEGORIES else "operating_expense",
                    float(out["confidence"]))
-        except (json.JSONDecodeError, KeyError, ValueError):
+        except (json.JSONDecodeError, KeyError, TypeError, ValueError):
             res = ("operating_expense", 0.0)
         self.cache[key] = res
+        if self.calls % 25 == 0:
+            print(f"   LLM calls so far: {self.calls}")
         return res
 
 
@@ -160,9 +217,10 @@ class HybridClassifier:
         low = m & (out["confidence"] < thr)
         if low.any():
             if self.llm is not None and self.llm.enabled:
+                ctx = llm_context(df, df.index[low])
+                print(f"   Sending {low.sum():,} low-confidence transactions to {self.llm.model} (answers are cached) ...")
                 for i in df.index[low]:
-                    cat, conf = self.llm.classify(df.at[i, "description"], df.at[i, "norm"], df.at[i, "amount"],
-                                                  int(df.at[i, "n_seen"]), bool(df.at[i, "same_amt"]))
+                    cat, conf = self.llm.classify(df.at[i, "norm"], ctx.loc[i].to_dict())
                     out.loc[i, ["category", "confidence", "tier"]] = [cat, conf, "llm"]
             else:
                 out.loc[low, "tier"] = "review_queue"  # ML label kept, flagged for a human

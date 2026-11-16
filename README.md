@@ -51,7 +51,7 @@ Design choices worth noting:
 - **Recurrence context is the key feature.** A generic `ACH DEBIT … CCD` could be a supplier autopay or an unnamed MCA. What separates them is behavior: the MCA hits every business day for the same amount. The classifier sees how often each normalized pattern recurs in the statement and whether the amounts are identical.
 - **Stricter thresholds for credit-critical categories** (revenue, lender payments, loan proceeds, transfers): 0.90 vs. 0.80. A misread lender payment distorts debt capacity far more than a misread office-supply purchase.
 - **Recall on loan proceeds is the weak spot (78%).** Unnamed wires look identical whether they come from a funder or a large customer. In production this is where network data helps most: if another funder on the network just funded this business, the wire is almost certainly proceeds.
-- **The LLM tier** (`smbcredit/classify.py`, `LLMClassifier`) sends the descriptor, amount and recurrence context to Claude and asks for structured JSON. It caches by normalized descriptor so each merchant string is paid for once. It switches on when `ANTHROPIC_API_KEY` is set. Without a key, those lines go to a human-review queue (`reports/review_queue_sample.csv`). The results above were produced offline, so the "queue resolved" row is the *upper bound* of what the LLM/human tier can recover.
+- **The LLM tier** (`smbcredit/classify.py`, `LLMClassifier`, Claude Haiku 5.5) gets what the descriptor alone can't show: the transaction's size relative to the business's typical deposit, how often that exact amount recurs, its cadence (daily / weekly / irregular), and, for credits, whether identical recurring debits start within three days (the signature of loan proceeds). That context is bucketed, so answers are cached per combination: a full run makes **38 LLM calls** for ~50,000 low-confidence transactions, a few cents. On those transactions the ML guess is 69.9% accurate; the best achievable answer given this context is 98.0%. Without `ANTHROPIC_API_KEY`, those lines go to a human-review queue (`reports/review_queue_sample.csv`). The headline results above were produced offline, so the "queue resolved" row is the *upper bound* for the LLM/human tier.
 
 Feature fidelity (correlation of features built from predicted vs. true categories) is lowest exactly where the business impact is: active funders (0.92) and recent new financing (0.87).
 
@@ -85,7 +85,7 @@ Debt stacking dominates: active funders, debt service relative to revenue and NS
 ```bash
 pip install -r requirements.txt
 python run_pipeline.py                          # ~2 min; writes reports/
-ANTHROPIC_API_KEY=sk-... python run_pipeline.py  # enables the LLM tier
+ANTHROPIC_API_KEY=sk-ant-... python run_pipeline.py  # enables the LLM tier (~38 calls)
 pytest -q
 ```
 
